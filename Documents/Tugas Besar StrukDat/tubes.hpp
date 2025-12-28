@@ -1,9 +1,3 @@
-//
-//  tubes.hpp
-//  TUBES STRUKTUR DATA
-//
-//  Created by afr on 12/1/24.
-//
 
 #ifndef tubes_hpp
 #define tubes_hpp

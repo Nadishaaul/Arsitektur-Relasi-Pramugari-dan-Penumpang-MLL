@@ -1,9 +1,4 @@
-//
-//  tubes.cpp
-//  TUBES STRUKTUR DATA
-//
-//  Created by afr on 12/1/24.
-//
+
 
 #include "tubes.hpp"
 #include <iomanip>
