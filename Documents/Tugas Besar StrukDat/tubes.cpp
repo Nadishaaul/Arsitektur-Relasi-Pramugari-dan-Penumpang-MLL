@@ -86,6 +86,7 @@ void showPenumpangOfPramugari(list_pramugari LP, int idPramugari) {
     }
 }
 
+// Fitur 3: Hapus Pramugari
 // Fungsi untuk menghapus pramugari berdasarkan ID
 void deletePramugariByID(list_pramugari &LP, int idPramugari) {
     adr_pramugari P = findPramugariByID(LP, idPramugari);
@@ -170,6 +171,7 @@ void showAllPenumpang(list_pramugari &LP){
     }
 }
 
+// Fitur 1: Tambahkan Pramugari
 // Fungsi untuk menambahkan N pramugari
 void addNPramugari(list_pramugari &LP) {
     int N;
@@ -211,6 +213,7 @@ void addNPramugari(list_pramugari &LP) {
     }
 }
 
+// Fitur 6: Tambahkan Penumpang
 // Fungsi untuk menambahkan N penumpang ke pramugari tertentu
 void addNPenumpangToPramugari(list_pramugari &LP) {
     int idPramugari, N;
@@ -283,6 +286,7 @@ void addNPenumpangToPramugari(list_pramugari &LP) {
 }
 
 
+// Fitur 10: Tampilkan semua Pramugari beserta Penumpangnya
 // Fungsi untuk menampilkan semua pramugari dan penumpang
 void showAllPramugariWithPenumpang(list_pramugari &LP) {
     if (LP.first == NULL) {
@@ -321,6 +325,7 @@ void showAllPramugariWithPenumpang(list_pramugari &LP) {
     }
 }
 
+// Fitur 11: Pramugari yang paling banyak melayani Penumpang
 void displayPramugariWithMostPenumpang(list_pramugari &LP) {
     if (LP.first == NULL) {
         cout << "+-----------------------------+" << endl;
@@ -366,6 +371,7 @@ void displayPramugariWithMostPenumpang(list_pramugari &LP) {
     }
 }
 
+// Fitur 2: Tampilkan semua Pramugari
 void showAllPramugari(list_pramugari &LP) {
     if (LP.first == NULL) {
         cout << "+-----------------------------+" << endl;
@@ -386,6 +392,7 @@ void showAllPramugari(list_pramugari &LP) {
     }
 }
 
+// Fitur 4: Mencari Pramugari
 void searchPramugariByID(list_pramugari LP, int idPramugari) {
     adr_pramugari P = LP.first;
     bool found = false;
@@ -409,6 +416,7 @@ void searchPramugariByID(list_pramugari LP, int idPramugari) {
     }
 }
 
+// Fitur 7: Mencari Penumpang
 // Fungsi untuk mencari data penumpang berdasarkan ID penumpang
 void searchPenumpangByID(list_pramugari &LP, int idPenumpang) {
     adr_pramugari pramugari = LP.first;
@@ -443,6 +451,7 @@ void searchPenumpangByID(list_pramugari &LP, int idPenumpang) {
 }
 
 
+// Fitur 9: Hubungkan Pramugari dengan Penumpang
 // Fungsi untuk menambahkan penumpang ke pramugari tertentu dan menghubungkannya
 void connectPenumpangAndPramugari(list_pramugari &LP, int idPenumpang, int idPramugari) {
     // Mencari pramugari berdasarkan ID
@@ -505,6 +514,7 @@ void connectPenumpangAndPramugari(list_pramugari &LP, int idPenumpang, int idPra
     }
 }
 
+// Fitur 12: Cari Penumpang di Pramugari
 void findPenumpangInPramugari(list_pramugari &LP, int idPramugari) {
     adr_pramugari P = LP.first; // Menelusuri list pramugari
     bool found = false; // Menandakan apakah pramugari ditemukan
@@ -543,6 +553,7 @@ void findPenumpangInPramugari(list_pramugari &LP, int idPramugari) {
     }
 }
 
+// Fitur 13: Hapus Penumpang di Pramugari
 void deletePenumpangFromPramugari(list_pramugari &LP, int idPramugari, int idPenumpang) {
     adr_pramugari P = LP.first;
     while (P != NULL && infoPramugari(P).id != idPramugari) {
@@ -581,6 +592,7 @@ void deletePenumpangFromPramugari(list_pramugari &LP, int idPramugari, int idPen
     }
 }
 
+// Fitur 5: Edit Pramugari
 // Fungsi untuk mengedit data pramugari berdasarkan ID
 void editPramugariByID(list_pramugari &LP, int idPramugari) {
     adr_pramugari P = LP.first;
@@ -613,6 +625,7 @@ void editPramugariByID(list_pramugari &LP, int idPramugari) {
     }
 }
 
+// Fitur 8: Edit Penumpang
 // Fungsi untuk mengedit data penumpang berdasarkan ID
 void editPenumpangByID(list_pramugari &LP, int idPenumpang) {
     adr_pramugari pramugari = LP.first;
@@ -765,7 +778,7 @@ adr_pramugari findPramugariByID(list_pramugari LP, int id) {
     return P;
 }
 
-// Fungsi helper untuk mencari penumpang berdasarkan ID
+// Helper function untuk mencari penumpang berdasarkan ID (digunakan dalam operasi internal seperti edit dan delete)
 adr_penumpang findPenumpangByID(list_pramugari LP, int id) {
     adr_pramugari P = LP.first;
     while (P != NULL) {
