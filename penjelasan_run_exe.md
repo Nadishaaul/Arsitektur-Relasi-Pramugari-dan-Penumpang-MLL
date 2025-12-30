@@ -124,9 +124,11 @@ Jika ada error, gunakan debugger seperti gdb (untuk MinGW) atau Visual Studio de
 - Executable bisa di-scan antivirus.
 - Tidak mengandung malware (asumsi dari source code bersih).
 
-## 3. autopush.ps1 - Fitur Auto Push ke GitHub
+## 3. autopush.ps1 dan autopush.sh - Fitur Auto Push ke GitHub
 
-`autopush.ps1` adalah script PowerShell yang secara otomatis melakukan commit dan push perubahan kode ke repository GitHub.
+`autopush.ps1` adalah script PowerShell untuk Windows yang secara otomatis melakukan commit dan push perubahan kode ke repository GitHub.
+
+`autopush.sh` adalah versi Bash script untuk sistem Unix/Linux atau Git Bash di Windows.
 
 ### Struktur Kode:
 
@@ -236,11 +238,27 @@ Write-Host "Successfully pushed to GitHub!" -ForegroundColor Green
 - Custom commit message.
 - Integrasi dengan development process.
 
-### Prerequisites:
+### Cara Penggunaan autopush.sh:
+
+1. **Di Linux/Unix atau Git Bash di Windows:**
+   - Jalankan: `./autopush.sh`
+   - Dengan custom message: `./autopush.sh "Your commit message"`
+
+2. **Di Windows CMD (jika bash tersedia):**
+   - `bash autopush.sh`
+   - `bash autopush.sh "Custom message"`
+
+### Prerequisites untuk autopush.sh:
+
+- Bash shell (tersedia di Linux, macOS, atau Git Bash di Windows).
+- Git terinstall.
+- Repository Git dengan remote GitHub (sudah di-setup).
+
+### Prerequisites untuk autopush.ps1:
 
 - Git terinstall.
-- Repository Git dengan remote GitHub.
-- PowerShell execution policy allow scripts.
+- Repository Git dengan remote GitHub (sudah di-setup ke https://github.com/Nadishaaul/Arsitektur-Relasi-Pramugari-dan-Penumpang-MLL.git).
+- PowerShell execution policy allow scripts (gunakan -ExecutionPolicy Bypass saat run).
 
 ## 4. Kesimpulan
 
